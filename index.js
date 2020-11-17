@@ -4,6 +4,7 @@ const users = require('./routes/users');
 
 const app = express();
 
+app.set('port', process.env.PORT || 3001);
 
 app.use(express.json());
 
@@ -17,6 +18,6 @@ app.get('/',(req,res)=>{
 // Routes//
 app.use('/api',users);
 
-app.listen(3001, () => {
+app.listen(app.get('port'), () => {
   console.log(`running server port 3001`);
 });
