@@ -6,10 +6,12 @@ const app = express();
 
 app.set('port', process.env.PORT || 3001);
 
-app.use(express.json());
-
 app.use(cors({origin: '*'}));
 //app.use(cors({origin: 'https://kuepj-3000.sse.codesandbox.io'}));
+
+
+app.use(express.json());
+
 
 app.get('/',(req,res)=>{
   res.send('hi');
