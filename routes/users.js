@@ -3,6 +3,9 @@ const router = express.Router();
 
 const mysqlConnection  = require('../db/db');
 
+router.get('/',(req,res)=>{
+  res.json('hi');
+});
 
 router.post('/register/',(req,res)=>{
   const {userEmail,password}=req.body;
